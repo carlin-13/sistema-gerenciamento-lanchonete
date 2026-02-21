@@ -35,7 +35,6 @@ void registrarPedido(Pedido pedidos[], int *totalPedidos, Produto cardapio[], in
 
 }
 
-//adicionei a funcionalidade de o código conseguir somar o valor do pedido que está pedindo
 void calcularValorPedido(Pedido pedidos[], int totalPedidos, Produto cardapio[], int totalProdutos) {
     float valorTotal = 0.0;
     
@@ -50,3 +49,4 @@ void calcularValorPedido(Pedido pedidos[], int totalPedidos, Produto cardapio[],
     printf("\n--- VALOR TOTAL DO PEDIDO ---\n");
     printf("Valor Total: R$ %.2f\n", valorTotal);
 }
+
