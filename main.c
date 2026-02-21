@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include "dados.h"
+#include <locale.h>
+#include <windows.h>
 
 // Protótipos das funções (ou use um arquivo .h para elas)
 void cadastrarProduto(Produto cardapio[], int *totalProdutos);
 void listarCardapio(Produto cardapio[], int totalProdutos);
 void registrarPedido(Pedido pedidos[], int *totalPedidos, Produto cardapio[], int totalProdutos);
+void calcularValorPedido(Pedido pedidos[], int totalPedidos, Produto cardapio[], int totalProdutos);
 
 int main() {
+
+SetConsoleOutputCP(CP_UTF8);    
+
     Produto cardapio[50];
     Pedido pedidos[100];
     int totalProdutos = 0;
@@ -14,7 +20,7 @@ int main() {
     int opcao;
 
     do {
-        printf("\n--- LANCHONETE SYSTEM ---\n");
+        printf("\n--- SISTEMA DA LANCHONETE ---\n");
         printf("1. Cadastrar Item no Cardápio\n");
         printf("2. Ver Cardápio\n");
         printf("3. Novo Pedido\n");
@@ -34,6 +40,7 @@ int main() {
                     printf("Cadastre um produto primeiro!\n");
                 } else {
                     registrarPedido(pedidos, &totalPedidos, cardapio, totalProdutos);
+                    calcularValorPedido(pedidos, totalPedidos, cardapio, totalProdutos);
                 }
                 break;
             case 0:
