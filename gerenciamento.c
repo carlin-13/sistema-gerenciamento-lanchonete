@@ -50,3 +50,4 @@ void calcularValorPedido(Pedido pedidos[], int totalPedidos, Produto cardapio[],
     printf("Valor Total: R$ %.2f\n", valorTotal);
 }
 
+
