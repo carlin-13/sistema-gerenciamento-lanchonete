@@ -1,7 +1,7 @@
 # Sistema de Gerenciamento de Lanchonete 
 Aqui dentro contém um sistema de Gerenciamento de Lanchonete feito na linguagem C. 
 
-##Composição do código 
+Composição do código 
 Abaixo estão os scripts sobre como foi feito o sistema de Gerenciamento de Lanchonete
 
 <summary><b> Composição do Código </b></summary>
